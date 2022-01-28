@@ -22,7 +22,7 @@ pipeline{
                 sh 'mvn package'
             }
         }
-        stage(Deploy){
+        stage('Deploy'){
             steps{
                 sh 'java -jar /var/lib/jenkins/workspace/PetClinicDeclarativePipeline/target/*.jar'
             }
